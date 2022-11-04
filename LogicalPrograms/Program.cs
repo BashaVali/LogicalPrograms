@@ -14,7 +14,8 @@ namespace LogicalProblems
                                 "2.PerfectNumber" + "\n" +
                                 "3.PrimeNumber" + "\n" +
                                 "4.ReverseNumber" + "\n" +
-                                "5.CouponNumber");
+                                "5.CouponNumber" + "\n" +
+                                "6.TemperatureConversion");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -48,8 +49,25 @@ namespace LogicalProblems
                     Console.WriteLine("\n" + "Enter the Coupon Number" + "\n");
                     int num = Convert.ToInt32(Console.ReadLine());
                     CouponNumber.GenerateCoupons(num);
-                    break;                
+                    break;
+                case 6:
+                    TemperatureConversion temperatureConversion = new TemperatureConversion();
+                    Console.WriteLine("1. Celcius to Fahrenheit  \n 2.  Fahrenheit to celcius ");
+                    int TemperatureConversion = Convert.ToInt32(Console.ReadLine());
+                    if (TemperatureConversion == 0)
+                    {
+                        float f = temperatureConversion.celcuisConvert(5);
+                        Console.WriteLine("\n" + "Celcius to Fahrenheit  is " + f);
+                    }
+                    else
+                    {
+                        float c = temperatureConversion.fahrenhiteConvert(5);
+                        Console.WriteLine("\n" + "Fahrenheit to celcius is " + c);
+                    }
+                    break;
             }
+
         }
+        
     }
 }
