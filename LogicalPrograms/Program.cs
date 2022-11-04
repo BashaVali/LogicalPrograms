@@ -15,7 +15,8 @@ namespace LogicalProblems
                                 "3.PrimeNumber" + "\n" +
                                 "4.ReverseNumber" + "\n" +
                                 "5.CouponNumber" + "\n" +
-                                "6.TemperatureConversion");
+                                "6.TemperatureConversion" + "\n"+
+                                "7.StopWatch" + "\n");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -64,6 +65,10 @@ namespace LogicalProblems
                         float c = temperatureConversion.fahrenhiteConvert(5);
                         Console.WriteLine("\n" + "Fahrenheit to celcius is " + c);
                     }
+                    break;
+                case 7:
+                    StopWatch stopWatch = new StopWatch();
+                    stopWatch.Start();
                     break;
             }
 
