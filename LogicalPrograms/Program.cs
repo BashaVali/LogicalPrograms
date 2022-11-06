@@ -17,7 +17,8 @@ namespace LogicalProblems
                                 "5.CouponNumber" + "\n" +
                                 "6.TemperatureConversion" + "\n"+
                                 "7.StopWatch" + "\n"+
-                                "8.VendingMachine" + "\n");
+                                "8.VendingMachine" + "\n"+
+                                "9.MonthlyPayment" + "\n");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -73,8 +74,11 @@ namespace LogicalProblems
                     break;
                 case 8:
                     VendingMachine vendingMachine = new VendingMachine();
-                    vendingMachine.Notes(2250);
-                                       
+                    vendingMachine.Notes(2250);                     
+                    break;
+                case 9:
+                    MonthlyPayments monthlyPayments = new MonthlyPayments();
+                    MonthlyPayments.MonthlyPayment(10,20,30);
                     break;
 
             }
